@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Restaurant Website and Gallery Template with jQuery and Google Maps</title>
+		<meta charset=utf-8>
+        <meta name="description" content="Restaurant Website and Gallery Template with jQuery and Google Maps" />
+        <meta name="keywords" content="jquery, gallery, images, css3, html5, photography, website, template, google maps, sliding, background"/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+
+		<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis+Light' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+				<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+    	<div id="modal" class="modal">
+    								<div>
+							       <div class="text" align="center">
+							       <div id="blok_tel">
+							  <form action="" method="post" class="form1">
+							<font class="top">ЗАКАЗ ОБРАТНОГО ЗВОНКА</font>
+							<input type="text" name="" class="inputbox" value="Ваше имя*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="text" name="" class="inputbox" value="Ваш телефон*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="submit" class="button" name="submit_tel">
+							  </form>
+							<?if(isset($_POST["submit_tel"])) 
+							{
+							$email = 'powwerbox@yandex.ru';
+							/* Отправляем email */
+							mail($email, "Заказ обратного звонка на сайте ...", "\n
+							Посетитель заказал обратный звонок! \n
+							Телефон : ".$_POST['tel']."
+							");
+							echo 'Заявка принята!';
+							}
+							?>
+							</div>
+							</div>
+							        <a href="#close" title="Закрыть">Закрыть</a>
+							    </div>        
+							</div>
+		<div id="map"></div>
+		<div id="bf_container" class="bf_container">
+			<div id="bf_background" class="bf_background">
+				<img src="images/background/default.jpg" alt="image1" style="display:none;"/>
+				<div class="bf_overlay"></div>
+			</div>
+			<div id="bf_page_menu" class="bf_menu" >
+        
+			   <a href data-content="home" ><img src="images/logo.png" width="270" height="270" style="position: absolute; top: 0px; left: 0px; padding: 15px;"></a>
+				<ul>
+					<li><a href="#"  data-content="home"><span class="bf_hover" id="help"></span><span>О нас</span></a></li>
+					<li><a href="#" data-content="about"><span class="bf_hover"></span><span>Прайс-лист</span></a></li>
+					<li><a href="#" data-content="menu"><span class="bf_hover"></span><span>Наши услуги</span></a></li>
+					<li><a href="#" data-content="time"><span class="bf_hover"></span><span>Контакты</span></a></li>
+				</ul>
+			</div>
+			<div class="bf_page" id="home" style="display:block;">
+				<div class="bf_content_text3 bf_next">
+			<br>
+		<div id="count_like_people">
+			<div class="opacity_bg">
+			<span class="number_count">1</span>
+			<span class="number_count">4</span>
+			<span class="number_count">7</span>
+			<span class="number_count">8</span>
+			<p>ДОВОЛЬНЫХ КЛИЕНТОВ НАШЕГО СЕРВИСА</p> 
+		</div>
+		</div>
+		<div class="hello">
+			<p>Мы рады приветствовать Вас на страничке технического центра Smart-garage.</p>
+      <hr>
+       <p>Вот уже более 10 лет коллектив нашего центра занимается диагностикой и ремонтом различных систем автомобиля. За это время мы научились решать самые сложные технические задачи. Весь этот бесценный опыт мы  помножили на самое современное оборудование. Наш технический центр укомплектован несколькими дилерскими приборами, мощным мультимарочным сканером, многоканальным мотор-тестером. Для решения задач по программированию и чип-тюнингу мы используем оригинальное оборудование от ведущих мировых производителей. Для углубленной визуальной диагностических - оптический и видео эндоскопы. Все это позволяет нам выявить практически любую неисправность в Вашем автомобиле в самые короткие сроки. Каждый побывавший у нас автомобиль мы заносим в клиентскую базу, таким образом у нас остается вся история обслуживания Вашего автомобиля. И самое главное - мы берем деньги только за результат, а на все выполненные работы предоставляем гарантию.</p>
+			</div>
+          <div class="sociallink">
+            <p>Присоединяйтесь к нам </p> 
+            <a href="https://vk.com/id382290708" target="blank" ><img class="shit" src="images/vk.png" ></a>
+            <a href="https://www.instagram.com/smart_garage33/" target="blank" ><img src="images/inst.png" ></a>
+            <a href="https://www.drive2.ru/o/Smartgarage" target="blank" ><img src="images/drive2.png" ></a>
+          </div>
+		<div class="container-text-column">
+			<div class="text-column">
+				
+			</div>
+			<div class="text-column"></div>
+			</div>
+
+		</div>
+		</div>
+			<div class="bf_page" id="about">
+				<div class="bf_content_text3 bf_next">
+
+					<div class="works">
+						<div class="demo">
+							<div class="white">
+    <input class="hide" id="hd-1" type="checkbox">
+    <label for="hd-1" style="z-index: 9;">Диагностика</label>
+    <div class="table">
+      <p>Мы всегда готовы проконсультировать Вас по возникшим вопросам.<br>
+      <strong> +7(904)039-77-44</strong> уточните цену на ремонт Вашего автомобиля.</p>
+      <br>
+        <table>
+<tr>
+  <th>Сканер</th>
+  <th width="120">от 500р.</th>
+  </tr>
+ <tr>
+  <td>Сброс ошибок</td>
+  <td>от 300р.</td>
+ </tr>
+<tr>
+  <td>Сканер всех систем автомобиля</td>
+  <td>от 1000р.</td>
+</tr>
+<tr>
+  <td>Диагностика GDI</td>
+  <td>от 1000р.</td>
+</tr>
+<tr>
+  <td>Проверка катушки зажигания</td>
+  <td>от 100р./катушка</td>
+</tr>
+<tr>
+  <td>Ремонт ТНВД</td>
+  <td>от 1000р.</td>
+</tr>
+<tr>
+  <td>Сканер ДВС</td>
+  <td>от 1500р.</td>
+</tr>
+<tr>
+  <td>Осмотр цилиндра эндоскопом</td>
+  <td>от 200р./цилиндр</td>
+ </tr>
+  <th>Замер компрессии</th>
+  <th>от 300р.</th>
+</tr>
+<td>Замер давления топлива</td>
+  <td>от 300р.</td>
+</tr>
+<td>Замер противодавления в катализаторе</td>
+  <td>от 500р.</td>
+</tr>
+<td>Проверка утечек ЦПГ</td>
+  <td>от 300р.</td>
+</tr>
+<td>Ремонт дроссельной заслонки (Lancer 9)</td>
+  <td>3500р.</td>
+</tr>
+<td>Промывка дроссельного узла</td>
+  <td>от 500р.</td>
+</tr>
+<td>Адаптация дроссельного узла</td>
+  <td>от 1000р.</td>
+</tr>
+<td>Адаптация DSG</td>
+  <td>1000р.</td>
+</tr>
+<td>Адаптация роботизированной КПП</td>
+  <td>от 1000р.</td>
+</tr>
+
+</table>
+
+    </div>
+</div>
+
+        <br/>
+        <div>
+    <div class="white">
+    <input class="hide" id="hd-2" type="checkbox">
+    <label for="hd-2" style="z-index: 9;">Ремонт Автоэлектроники</label>
+    <div class="table">
+      <p>Мы всегда готовы проконсультировать Вас по возникшим вопросам.<br>
+      <strong> +7(904)039-77-44</strong> уточните цену на ремонт Вашего автомобиля.</p>
+      <br>
+        <table>
+<tr>
+  <th>Удаление crash-data</th>
+  <th width="120">от 2000р.</th>
+  </tr>
+ <tr>
+  <td>Программирование ЭБУ</td>
+  <td>от 1000р.</td>
+ </tr>
+<tr>
+  <td>Активация доп. функций</td>
+  <td>от 700р.</td>
+</tr>
+<tr>
+  <td>Ремонт ЭБУ</td>
+  <td>от 1500р.</td>
+</tr>
+<tr>
+  <td>Ремонт приборной панели</td>
+  <td>от 500р.</td>
+</tr>
+<td>Ремонт блока ABS</td>
+  <td>от 4000р.</td>
+</tr>
+<td>Ремонт блока управления двигателя (Opel)</td>
+  <td>10000р.</td>
+</tr>
+</table>
+    </div>
+</div>
+    <br/>
+    <div class="white">
+    <input class="hide" id="hd-3" type="checkbox">
+    <label for="hd-3" style="z-index: 9;">Чип-тюнинг</label>
+    <div class="table">
+      <p>Мы всегда готовы проконсультировать Вас по возникшим вопросам.<br>
+      <strong> +7(904)039-77-44</strong> уточните цену на ремонт Вашего автомобиля.</p>
+      <br>
+        <table>
+<tr>
+  <th>Програмный перевод на Евро2</th>
+  <th width="120">от 3500р.</th>
+  </tr>
+ <tr>
+  <td>Чип-тюнинг VAG 1,8T</td>
+  <td>8000р.</td>
+ </tr>
+<tr>
+  <td>Чип-тюнинг VAG 1,2 - 1,4 TSI (TFSI)</td>
+  <td>12000р.</td>
+</tr>
+<tr>
+  <td>Чип-тюнинг VAG 1,8 - 2,0 TSI (TFSI)</td>
+  <td>14000р.</td>
+</tr>
+<tr>
+  <td>Чип-тюнинг дизелей</td>
+  <td>от 6000р.</td>
+ </tr>
+  <th>Чип-тюнинг BMW</th>
+  <th>от 12000р.</th>
+</tr>
+<td>Чип-тюнинг Mercedes</td>
+  <td>от 12000р.</td>
+</tr>
+</table>
+    </div>
+</div>
+        <br/>
+    <div class="white">
+    <input class="hide" id="hd-4" type="checkbox">
+    <label for="hd-4" style="z-index: 9;">Двигатель</label>
+    <div class="table">
+      <p>Мы всегда готовы проконсультировать Вас по возникшим вопросам.<br>
+      <strong> +7(904)039-77-44</strong> уточните цену на ремонт Вашего автомобиля.</p>
+      <br>
+        <table>
+<tr>
+  <th>Техническое обслуживание</th>
+  <th width="120">от 1000р.</th>
+  </tr>
+ <tr>
+  <td>Замена ДВС</td>
+  <td>от 10000р.</td>
+ </tr>
+<tr>
+  <td>Замена комплекта ГРМ</td>
+  <td>от 2000р.</td>
+</tr>
+<tr>
+  <td>Замена сальника коленвала переднего</td>
+  <td>от 600р.</td>
+</tr>
+<tr>
+  <td>Замена сальника коленвала заднего</td>
+  <td>от 4000р.</td>
+ </tr>
+  <th>Замена прокладки ГБЦ</th>
+  <th>от 6000р.</th>
+</tr>
+<td>Замена клапанной крышки</td>
+  <td>от 500р.</td>
+</tr>
+<td>Замена приводного ремня</td>
+  <td>от 500р.</td>
+</tr>
+<td>Замена термостата</td>
+  <td>от 500р.</td>
+</tr>
+<td>Замена помпы</td>
+  <td>от 1000р.</td>
+</tr>
+<td>Замена подушки ДВС</td>
+  <td>от 800р.</td>
+</tr>
+<td>Удаление катализаторов</td>
+  <td> от 1500р.</td>
+</tr>
+<td>Замена антифриза</td>
+  <td>от 600р.</td>
+</tr>
+
+</table>
+    </div>
+</div>
+<br/>
+<div class="white">
+    <input class="hide" id="hd-5" type="checkbox">
+    <label for="hd-5" style="z-index: 9;">Трансмиссия</label>
+    <div class="table">
+      <p>Мы всегда готовы проконсультировать Вас по возникшим вопросам.<br>
+      <strong> +7(904)039-77-44</strong> уточните цену на ремонт Вашего автомобиля.</p>
+      <br>
+        <table>
+<tr>
+  <th>Замена сальников привода КПП</th>
+  <th width="120">от 500р.</th>
+  </tr>
+ <tr>
+  <td>Замена шруса</td>
+  <td>от 1000р.</td>
+ </tr>
+<tr>
+  <td>Сласарные работы</td>
+  <td>от 300р.</td>
+</tr>
+<tr>
+  <td>Замена сцепления</td>
+  <td>от 3500р.</td>
+</tr>
+<tr>
+  <td>Замена АКПП</td>
+  <td>от 3500р.</td>
+ </tr>
+  <th>Снятие/установка КПП</th>
+  <th>от 4000р.</th>
+</tr>
+<td>Замена пыльника привода внутреннего</td>
+  <td>от 1000р.</td>
+</tr>
+<td>Замена пыльника привода наружного</td>
+  <td>от 1000р.</td>
+</tr>
+<td>Замена карданного вала</td>
+  <td>от 1000р.</td>
+</tr>
+<td>Замена редуктора</td>
+  <td>от 2000р.</td>
+</tr>
+</table>  
+    </div>
+</div>
+    	<br/>
+     <div class="white">
+    <input class="hide" id="hd-6" type="checkbox">
+    <label for="hd-6" style="z-index: 9;">Ходовая часть</label>
+    <div class="table">
+      <p>Мы всегда готовы проконсультировать Вас по возникшим вопросам.<br>
+      <strong> +7(904)039-77-44</strong> уточните цену на ремонт Вашего автомобиля.</p>
+      <br>  
+        <table>
+<tr>
+  <th>Замена ступичного подшипника</th>
+  <th width="120">от 1000р.</th>
+  </tr>
+ <tr>
+  <td>Замена стойки амортизатора</td>
+  <td>от 700р.</td>
+ </tr>
+<tr>
+  <td>Замена тормозных колодок</td>
+  <td>от 500р.</td>
+</tr>
+<tr>
+  <td>Замена тормозных дисков</td>
+  <td>от 500р.</td>
+</tr>
+<tr>
+  <td>Замена колодок ручника</td>
+  <td>от 700р.</td>
+ </tr>
+  <th>Замена сайлентблоков рычагов</th>
+  <th>от 1000р.</th>
+</tr>
+<td>Замена тормозной жидкости</td>
+  <td>от 600р.</td>
+</tr>
+<td>Замена рулевых наконечников</td>
+  <td>от 300р./шт.</td>
+</tr>
+<td>Замена рулевых тяг</td>
+  <td>от 600р./шт.</td>
+</tr>
+<td>Замена шаровой опоры</td>
+  <td>от 500р.</td>
+</tr>
+<td>Слесарные работы</td>
+  <td>от 300р.</td>
+</tr>
+<td>Замена верхнего рычага</td>
+  <td>от 500р.</td>
+</tr>
+<td>Замена нижнего рычага</td>
+  <td>от 500р.</td>
+</tr>
+<td>Замена стабилизатора</td>
+  <td>от 500р.</td>
+</tr>
+
+</table>
+    </div>
+</div>
+</div>
+</div>
+</div>
+          <div class="bottom_rek">
+          <span class="title">Владельцы любых автомобилей получат качественный ремонт и техническое обслуживание в нашем техцентре</span>
+          <div class="logo_icons">
+            <img border="0" src="images/icons/bmw.png">
+            <img border="0" src="images/icons/audi.png">
+            <img border="0" src="images/icons/chevrolet.png">
+            <img border="0" src="images/icons/citroen.png">
+            <img border="0" src="images/icons/daewoo.png">
+            <img border="0" src="images/icons/ford.png">
+            <img border="0" src="images/icons/honda.png">
+            <img border="0" src="images/icons/hyundai.png">
+            <img border="0" src="images/icons/jeep.png">
+            <img border="0" src="images/icons/kia.png">
+            <img border="0" src="images/icons/land.png">
+            <img border="0" src="images/icons/Lexus.png">
+            <img border="0" src="images/icons/mazda.png">
+            <img border="0" src="images/icons/mers.png">
+            <img border="0" src="images/icons/mitsubishi.png">
+            <img border="0" src="images/icons/nissan.png">
+            <img border="0" src="images/icons/opel.png">
+            <img border="0" src="images/icons/peugeot.png">
+            <img border="0" src="images/icons/porsche.png">
+            <img border="0" src="images/icons/reno.jpg">
+            <img border="0" src="images/icons/skoda.png">
+            <img border="0" src="images/icons/subaru.png">
+            <img border="0" src="images/icons/suzuki.png">
+            <img border="0" src="images/icons/toyota.png">
+          </div>
+          </div>
+			</div>
+    </div>  
+			<div class="bf_page" id="menu">
+				<div class="bf_content_text bf_next">
+					
+					<ul id="bf_dishes">
+						<li><a href="#"><img src="images/thumbs/1.jpg" alt="thumb1"/>Активация дополнительных функций</a></li>
+						<li><a href="#"><img src="images/thumbs/2.jpg" alt="thumb2"/>Ремонт блоков SRS</a></li>
+						<li><a href="#"><img src="images/thumbs/3.jpg" alt="thumb3"/>Диагностика и программирование</a></li>
+						<li><a href="#"><img src="images/thumbs/4.jpg" alt="thumb4"/>Увеличение мощности, чип тюнинг</a></li>
+						<li><a href="#"><img src="images/thumbs/5.jpg" alt="thumb5"/>Диагностика и ремонт электронных систем автомобиля</a></li>
+						<li><a href="#"><img src="images/thumbs/6.jpg" alt="thumb6"/>Техническое обслуживание, ремонт ДВС, ремонт ходовой части автомобиля.</a></li>
+						<li><a href="#"><img src="images/thumbs/7.jpg" alt="thumb7"/>Установка сигнализаций</a></li>
+						<li><a href="#"><img src="images/thumbs/8.jpg" alt="thumb8"/>Программирование и ремонт электронных блоков управления</a></li>
+					</ul>
+				</div>
+				<div id="bf_gallery" class="bf_gallery">
+					<a id="bf_close" href="#" class="bf_close"></a>
+					<div class="bf_nav">
+						<a id="bf_prev" href="#" class="bf_prev"></a>
+						<a id="bf_next" href="#" class="bf_next"></a>
+					</div>
+					<div class="bf_gallery_wrapper">
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><div class="bf_h2">Активация дополнительных функций</div>
+								<p>Современные автомобили оснащены множеством эл.блоков управления. Многие из них имеют возможность индивидуальной програмной настройки. Таким образом, Вы можете сами дооснастить автомобиль функциями, такими как - функция "Приведи домой" , функция дополнительного освещения поворотов, тест стрелок приборной панели и другие функции.</p>
+							</div>
+							<div class="bf_desc">
+									<img src="images/thumbs/bmw1.jpg" height="250" width="250"><img src="images/thumbs/bmw2.jpg" height="250" width="250"><img src="images/thumbs/bmw3.jpg" height="250" width="250">
+									<div class="back">
+									<a href="#modal" class="openModal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div id="modal" class="modal">
+    								<div>
+							       <div class="text" align="center">
+							       <div id="blok_tel">
+							  <form action="" method="post" class="form1">
+							<font class="top">ЗАКАЗ ОБРАТНОГО ЗВОНКА</font>
+							<input type="text" name="" class="inputbox" value="Ваше имя*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="text" name="" class="inputbox" value="Ваш телефон*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="submit" class="button" name="submit_tel">
+							  </form>
+							<?if(isset($_POST["submit_tel"])) 
+							{
+							$email = 'powwerbox@yandex.ru';
+							/* Отправляем email */
+							mail($email, "Заказ обратного звонка на сайте ...", "\n
+							Посетитель заказал обратный звонок! \n
+							Телефон : ".$_POST['tel']."
+							");
+							echo 'Заявка принята!';
+							}
+							?>
+							</div>
+							</div>
+							        <a href="#close" title="Закрыть">Закрыть</a>
+							    </div>        
+							</div>
+							</div>
+						</div>
+							<img data-bgimg="images/background/1.jpg" />
+						</div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><div class="bf_h2">Ремонт блоков SRS</div>
+								<p>Все современные автомобили оснащены системами активной безопасности (SRC). Данной системой управляет эл. блок. При аварии в его заносятся данные об ударе. Автопроизводитель предписывает замену этого блока. Мы поможем Вам обойтись без дорогостоящей замены путем перепрограммирования блока управления (Удаление crash-data).</p>
+							</div>
+							<div class="bf_desc">
+									<img src="images/thumbs/bmw4.jpg" height="250" width="250"><img src="images/thumbs/bmw5.jpg" height="250" width="200"><img src="images/thumbs/bmw6.jpg" height="250" width="250">
+									<div class="back">
+									<a href="#modal" class="openModal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div id="modal" class="modal">
+    								<div>
+							       <div class="text" align="center">
+							       <div id="blok_tel">
+							  <form action="" method="post" class="form1">
+							<font class="top">ЗАКАЗ ОБРАТНОГО ЗВОНКА</font>
+							<input type="text" name="" class="inputbox" value="Ваше имя*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="text" name="" class="inputbox" value="Ваш телефон*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="submit" class="button" name="submit_tel">
+							  </form>
+							<?if(isset($_POST["submit_tel"])) 
+							{
+							$email = 'powwerbox@yandex.ru';
+							/* Отправляем email */
+							mail($email, "Заказ обратного звонка на сайте ...", "\n
+							Посетитель заказал обратный звонок! \n
+							Телефон : ".$_POST['tel']."
+							");
+							echo 'Заявка принята!';
+							}
+							?>
+							</div>
+							</div>
+							        <a href="#close" title="Закрыть">Закрыть</a>
+							    </div>        
+							</div>
+							</div>
+							</div>
+							<img data-bgimg="images/background/2.jpg" />
+						</div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><div class="bf_h2">Диагностика и программирование</div>
+								<p>Автомобили стали технически сложнее и установить причину поломки старыми методами все сложнее. Современные автомобили оснащены множеством электронных систем. Электроника в автомобиле может управлять двигателем и тормозами, рулем и подвеской. В наших сервисных центрах работает передовое диагностическое оборудование Bosch, которое позволяет быстро определить причину поломки и устранить ее. Современное диагностическое оборудование позволяет не только определить проблему, но и предвидеть ее. Поэтому мы советуем не ждать, пока неисправность проявит себя, а проводить диагностику дважды в год, а также перед продолжительными поездками.</p>
+							</div>
+							<div class="bf_desc">
+								<p>— Чтение и расшифровка кодов ошибок</p>
+								<p>— Стирание ошибок (в т.ч. check engine)</p>
+								<p>— Проведение послеремонтной адаптации</p>
+								<p>— Чтение и программирование имобилайзера</p>
+                <p>И многое другое!</p>
+								<div class="back">
+									<a href="#modal" class="openModal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div id="modal" class="modal">
+    								<div>
+							       <div class="text" align="center">
+							       <div id="blok_tel">
+							  <form action="" method="post" class="form1">
+							<font class="top">ЗАКАЗ ОБРАТНОГО ЗВОНКА</font>
+							<input type="text" name="" class="inputbox" value="Ваше имя*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="text" name="" class="inputbox" value="Ваш телефон*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="submit" class="button" name="submit_tel">
+							  </form>
+							<?if(isset($_POST["submit_tel"])) 
+							{
+							$email = 'powwerbox@yandex.ru';
+							/* Отправляем email */
+							mail($email, "Заказ обратного звонка на сайте ...", "\n
+							Посетитель заказал обратный звонок! \n
+							Телефон : ".$_POST['tel']."
+							");
+							echo 'Заявка принята!';
+							}
+							?>
+							</div>
+							</div>
+							        <a href="#close" title="Закрыть">Закрыть</a>
+							    </div>        
+							</div>
+							</div>
+									<img src="images/thumbs/bmw9.jpg" height="250" width="250" style="position: absolute; top: -10px; left: 620px"><img src="images/thumbs/bmw7.jpg" height="250" width="250" style="position: absolute; top: -10px; left: 370px">
+							</div>
+							<img data-bgimg="images/background/3.jpg" />
+						</div>
+					<div class="bf_gallery_item">
+              <div class="bf_heading"><div class="bf_h2">Увеличение мощности, чип тюнинг</div>
+                <p>Назначение чип тюнинга заключается в оптимизации заводских параметров электронного блока управления (ЭБУ), контролирующего работу двигателя автомобиля. Иными словами, тюнинг позволяет корректировать целый ряд параметров двигателя без вмешательства в аппаратную часть мотора. Вы будете поражены, какой запас мощности скрывался в Вашем двигателе. Резкий старт, ровная мощная тяга, уверенный обгон вдохнут новую жизнь в Ваш автомобиль.  Производя чип-тюнинг автомобиля, специалисты нашего технического центра «Smart Garage» добиваются следующих результатов:</p>
+              </div>
+              <div class="bf_desc">
+                <p>— Увеличение мощности двигателя</p>
+                <p>— Улучшение динамики разгона транспортного средства</p>
+                <p>— Сокращение расхода топлива</p>
+                <p>— Устранение недочетов в заводской прошивке ЭБУ</p>
+                <div class="back">
+                  <a href="#modal" class="openModal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+                  <div id="modal" class="modal">
+                    <div>
+                     <div class="text" align="center">
+                     <div id="blok_tel">
+                <form action="" method="post" class="form1">
+              <font class="top">ЗАКАЗ ОБРАТНОГО ЗВОНКА</font>
+              <input type="text" name="" class="inputbox" value="Ваше имя*"
+                     onfocus="(this.value == '0123456789') && (this.value = '')"
+                     onblur="(this.value == '') && (this.value = '0123456789')">
+              <input type="text" name="" class="inputbox" value="Ваш телефон*"
+                     onfocus="(this.value == '0123456789') && (this.value = '')"
+                     onblur="(this.value == '') && (this.value = '0123456789')">
+              <input type="submit" class="button" name="submit_tel">
+                </form>
+              <?if(isset($_POST["submit_tel"])) 
+              {
+              $email = 'powwerbox@yandex.ru';
+              /* Отправляем email */
+              mail($email, "Заказ обратного звонка на сайте ...", "\n
+              Посетитель заказал обратный звонок! \n
+              Телефон : ".$_POST['tel']."
+              ");
+              echo 'Заявка принята!';
+              }
+              ?>
+              </div>
+              </div>
+                      <a href="#close" title="Закрыть">Закрыть</a>
+                  </div>        
+              </div>
+              </div>
+                  <img src="images/thumbs/bmw10.jpg" height="250" width="250" style="position: absolute; top: -40px; left: 620px"><img src="images/thumbs/bmw11.jpg" height="250" width="250" style="position: absolute; top: 70px; left: 470px">
+              </div>
+              <img data-bgimg="images/background/4.jpg" />
+            </div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><div class="bf_h2">Диагностика и ремонт электронных систем автомобиля</div>
+								<p>Современный автомобиль — это сложная система, наполненная разнообразной электроникой. Именно на нее приходится большинство поломок. Система пуска и зажигания, регулирование подачи топлива, освещение и контрольно-измерительные приборы требуют регулярной проверки на станциях техобслуживания. Основная причина выхода из строя электросистемы — нарушение качества контактов из-за пыли, окисления, вибраций.</p>
+								<p style="strong"> Мы производим следующие виды работ:</p>
+							</div>
+							<div class="bf_desc">
+								<p>— Проверка системы климат-контроль автомобиля</p>
+								<p>— Проверка системы управления бортовой электроникой</p>
+								<p>— Проверка системы активной безопасности</p>
+								<p>— Проверка системы управления двигателем</p>
+									<img src="images/thumbs/bmw13.jpg" height="250" width="250"  style="position: absolute; top: -80px; left: 600px"><img src="images/thumbs/bmw15.jpg" height="250" width="250"
+									  style="position: absolute; top: 100px; left: 600px">
+									<div class="back">
+									<a href="#modal" class="openModal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div id="modal" class="modal">
+    								<div>
+							       <div class="text" align="center">
+							       <div id="blok_tel">
+							  <form action="" method="post" class="form1">
+							<font class="top">ЗАКАЗ ОБРАТНОГО ЗВОНКА</font>
+							<input type="text" name="" class="inputbox" value="Ваше имя*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="text" name="" class="inputbox" value="Ваш телефон*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="submit" class="button" name="submit_tel">
+							  </form>
+							<?if(isset($_POST["submit_tel"])) 
+							{
+							$email = 'powwerbox@yandex.ru';
+							/* Отправляем email */
+							mail($email, "Заказ обратного звонка на сайте ...", "\n
+							Посетитель заказал обратный звонок! \n
+							Телефон : ".$_POST['tel']."
+							");
+							echo 'Заявка принята!';
+							}
+							?>
+							</div>
+							</div>
+							        <a href="#close" title="Закрыть">Закрыть</a>
+							    </div>        
+							</div>
+							</div>
+							</div>
+							<img data-bgimg="images/background/5.jpg" />
+						</div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><div class="bf_h2">Техническое обслуживание, ремонт ДВС, ремонт ходовой части автомобиля</div>
+								<p>Кроме проведения регламентных работ, наши специалисты помогут Вам с ремонтом ДВС и ходовой части автомобиля. Наш технический центр оснащен всем необходимым оборудованием, включая фирменные приспособления для установки ГРМ.</p>
+							</div>
+							<div class="bf_desc">
+									<img src="images/thumbs/bmw16.jpg" height="250" width="250"><img src="images/thumbs/bmw17.jpg" height="250" width="250"><img src="images/thumbs/bmw18.jpg" height="250" width="250">
+									<div class="back">
+									<a href="#modal" class="openModal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div id="modal" class="modal">
+    								<div>
+							       <div class="text" align="center">
+							       <div id="blok_tel">
+							  <form action="" method="post" class="form1">
+							<font class="top">ЗАКАЗ ОБРАТНОГО ЗВОНКА</font>
+							<input type="text" name="" class="inputbox" placeholder="Ваше имя*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="text" name="" class="inputbox" placeholder="Ваш телефон*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="submit" class="button" name="submit_tel">
+							  </form>
+							<?if(isset($_POST["submit_tel"])) 
+							{
+							$email = 'powwerbox@yandex.ru';
+							/* Отправляем email */
+							mail($email, "Заказ обратного звонка на сайте ...", "\n
+							Посетитель заказал обратный звонок! \n
+							Телефон : ".$_POST['tel']."
+							");
+							echo 'Заявка принята!';
+							}
+							?>
+							</div>
+							</div>
+							        <a href="#close" title="Закрыть">Закрыть</a>
+							    </div>        
+							</div>
+							</div>
+							</div>
+							<img data-bgimg="images/background/6.jpg" />
+						</div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><div class="bf_h2">Установка сигнализаций</div>
+								<p>В нашем сервисном центре мы предлагаем не только множество решений по совершенствованию систем безопасности вашего автомобиля, но и предоставляем возможность сделать Ваш автомобиль умнее и комфортнее. Для дооснащения и преобразования экстерьера, наша фирма использует комплектующие европейского производства. Наши специалисты имеют опыт по установке сигнализации около 20 лет.</p>
+							</div>
+							<div class="bf_desc">
+									<img src="images/thumbs/bmw19.jpg" height="250" width="250"><img src="images/thumbs/bmw20.jpg" height="250" width="250"><img src="images/thumbs/bmw21.jpg" height="250" width="250">
+									<div class="back">
+									<a href="#modal" class="openModal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div id="modal" class="modal">
+    								<div>
+							       <div class="text" align="center">
+							       <div id="blok_tel">
+							  <form action="" method="post" class="form1">
+							<font class="top">ЗАКАЗ ОБРАТНОГО ЗВОНКА</font>
+							<input type="text" name="" class="inputbox" placeholder="Ваше имя*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="text" name="" class="inputbox" placeholder="Ваш телефон*"
+							       onfocus="(this.value == '0123456789') && (this.value = '')"
+							       onblur="(this.value == '') && (this.value = '0123456789')">
+							<input type="submit" class="button" name="submit_tel">
+							  </form>
+							<?if(isset($_POST["submit_tel"])) 
+							{
+							$email = 'powwerbox@yandex.ru';
+							/* Отправляем email */
+							mail($email, "Заказ обратного звонка на сайте ...", "\n
+							Посетитель заказал обратный звонок! \n
+							Телефон : ".$_POST['tel']."
+							");
+							echo 'Заявка принята!';
+							}
+							?>
+							</div>
+							</div>
+							        <a href="#close" title="Закрыть">Закрыть</a>
+							    </div>        
+							</div>
+							</div>
+							</div>
+							<img data-bgimg="images/background/7.jpg" />
+						</div>
+						  <div class="bf_gallery_item">
+              <div class="bf_heading"><div class="bf_h2">Программирование и ремонт электронных блоков управления</div>
+                <p>Основой любой системы управления автомобилем, его основными узлами и системами, являются электронные блоки управления. От того, насколько корректно они функционируют, зависит работа всех подконтрольных и дополнительных систем автомобиля. Причин выхода из строя блоков управления великое множество. Это и перенапряжение, которое возникает вследствие короткого замыкания, воздействие внешних факторов, механические повреждения, коррозия и перегрев. Как правило, официальные дилеры производят ремонт автомобиля путем их полной замены. Однако такая мера не всегда экономически оправдана. Мы поможем Вам сэкономить на дорогостоящей замене!</p>
+              </div>
+              <div class="bf_desc">
+                  <img src="images/thumbs/bmw23.png" height="150" width="250"><img src="images/thumbs/bmw22.png" height="180" width="250"><img src="images/thumbs/bmw24.png" height="180" width="250">
+                  <div class="back">
+                  <a href="#modal" class="openModal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+                  <div id="modal" class="modal">
+                    <div>
+                     <div class="text" align="center">
+                     <div id="blok_tel">
+                <form action="" method="post" class="form1">
+              <font class="top">ЗАКАЗ ОБРАТНОГО ЗВОНКА</font>
+              <input type="text" name="" class="inputbox" placeholder="Ваше имя*"
+                     onfocus="(this.value == '0123456789') && (this.value = '')"
+                     onblur="(this.value == '') && (this.value = '0123456789')">
+              <input type="text" name="" class="inputbox" placeholder="Ваш телефон*"
+                     onfocus="(this.value == '0123456789') && (this.value = '')"
+                     onblur="(this.value == '') && (this.value = '0123456789')">
+              <input type="submit" class="button" name="submit_tel">
+                </form>
+              <?if(isset($_POST["submit_tel"])) 
+              {
+              $email = 'powwerbox@yandex.ru';
+              /* Отправляем email */
+              mail($email, "Заказ обратного звонка на сайте ...", "\n
+              Посетитель заказал обратный звонок! \n
+              Телефон : ".$_POST['tel']."
+              ");
+              echo 'Заявка принята!';
+              }
+              ?>
+              </div>
+              </div>
+                      <a href="#close" title="Закрыть">Закрыть</a>
+                  </div>        
+              </div>
+              </div>
+            </div>
+              <img data-bgimg="images/background/8.jpg" />
+            </div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="bf_page" id="time">
+				<div class="bf_content_text2 bf_next">
+					<div class="margin">
+					<p><img src="images/ico1.png" width="60" height="60" class="leftimg"/>+7 (904) 039-77-44 , +7 (900) 582-87-88</p>
+					<p><img src="images/ico2.png" width="60" height="60" class="leftimg"/>г.Владимир, 2-ой Почаевский проезд, д2</p>
+					<p><img src="images/ico3.png" width="60" height="60" class="leftimg"/>Пн.– Пт.: 9:00–18:00; Сб.: 9:00–14:00;</p>
+					<p><img src="images/ico4.png" width="60" height="60" class="leftimg"/> Smart-GARAGE33@mail.ru</p>
+					<img src="images/logo.png" width="290" height="290" style="position: absolute; top: 47px; left: 150px;">
+				</div>
+					<div class="maps">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ITrQ45smi-3ErMyhKEg_D4G62_3poQm3&amp;width=965&amp;height=306&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- The JavaScript -->
+		<!-- the mousewheel plugin - optional to provide mousewheel support -->
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.template.min.js"></script>
+
+		<script src="js/script.js"></script>
+    </body>
+</html>
